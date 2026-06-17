@@ -1,7 +1,6 @@
 const express = require('express');
 const axios = require('axios');
 const FormData = require('form-data');
-require('dotenv').config();
 
 const app = express();
 const PORT = process.env.PORT || 3000;
