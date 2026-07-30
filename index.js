@@ -15,6 +15,7 @@ const RECORDING_FOLDER = process.env.RECORDING_FOLDER;
 let lastSentFile = '';
 
 app.get('/api/isalive', (req, res) => {
+    console.log('Received ping from UptimeRobot - staying awake! ☕');
     res.status(200).send('alive');
 });
 
