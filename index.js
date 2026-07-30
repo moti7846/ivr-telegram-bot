@@ -14,6 +14,10 @@ const RECORDING_FOLDER = process.env.RECORDING_FOLDER;
 // משתנה ששומר את שם הקובץ האחרון שנשלח
 let lastSentFile = '';
 
+app.get('/api/isalive', (req, res) => {
+    res.status(200).send('alive');
+});
+
 app.get('/api/send-latest-record', async (req, res) => {
     // עונים מיד למערכת כדי לנתק את השיחה
     res.send('id_list_message=t-ההקלטה נשלחה&hangup=yes');
